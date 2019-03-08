@@ -1,0 +1,10 @@
+--- Java Wordladder
+
+1. mvn install(optional)
+	Install dependency.
+
+2. mvn clean package
+	Generate jar.
+
+3. java -jar target/Ladder.*.jar [arg1] [arg2] 
+	Run with arg1(begin) word and arg2(end word).
