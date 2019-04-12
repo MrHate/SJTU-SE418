@@ -6,11 +6,27 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Ladder{
-	public static void run(String s1,String s2){
-		if(!s2.equals("")){
-			System.out.println("Generating ladder..");
-			System.out.println(generateLadder(s1,s2));
+	private Ladder(){}
+
+	public static ArrayList<String> run(String s1,String s2){
+		if(s1.equals("") || s2.equals("")){
+			System.out.println("args must be non-empty.");
+			return null;
 		}
+		if(s1.length() != s2.length()){
+			System.out.println("args must be in same length");
+			return null;
+		}
+		if(s1.equals(s2)){
+			System.out.println("args must be different");
+			return null;
+		}
+
+		ArrayList<String> res = null;
+		System.out.println("Generating ladder..");
+		res = generateLadder(s1,s2);
+		System.out.println(res);
+		return res;
 	}
 	
 	private static ArrayList<String> generateDict(String filename){
