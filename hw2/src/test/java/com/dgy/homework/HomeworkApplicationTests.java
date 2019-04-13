@@ -30,27 +30,27 @@ public class HomeworkApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Test
-	public void ladderTest_1() {
-		//[cat, cag, cog, dog];
-		ArrayList<String> answer = new ArrayList(); 
-		answer.add("cat");
-		answer.add("cag");
-		answer.add("cog");
-		answer.add("dog");
-		ArrayList<String> result = Ladder.run("dog","cat");
-		Assert.assertEquals(answer,result);
-	}
+	//@Test
+	//public void ladderTest_1() {
+	//    //[cat, cag, cog, dog];
+	//    ArrayList<String> answer = new ArrayList(); 
+	//    answer.add("cat");
+	//    answer.add("cag");
+	//    answer.add("cog");
+	//    answer.add("dog");
+	//    ArrayList<String> result = Ladder.run("dog","cat");
+	//    Assert.assertEquals(answer,result);
+	//}
 
-	@Test
-	public void restTest() throws Exception{
-		RequestBuilder req = null;
+	//@Test
+	//public void restTest() throws Exception{
+	//    RequestBuilder req = null;
 
-		req = MockMvcRequestBuilders.get("/ladder/dog&cat");
-		mvc.perform(req)
-				.andExpect(status().isOk())
-				.andExpect(content().string("[\"cat\",\"cag\",\"cog\",\"dog\"]"));
-	}
+	//    req = MockMvcRequestBuilders.get("/ladder/dog&cat");
+	//    mvc.perform(req)
+	//            .andExpect(status().isOk())
+	//            .andExpect(content().string("[\"cat\",\"cag\",\"cog\",\"dog\"]"));
+	//}
 
 	//@Test
 	//public void ladderTest_2(){
