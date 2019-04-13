@@ -12,3 +12,6 @@
 **Homework 2**
 - Integrate Homework1 with Springboot.
 - Create new branch 'dev' as developing branch, then merge the final completion back to 'master' branch.
+- PullRequest for branch 'dev'.
+- Rest api adopted.
+- Test for Rest api and original interface.
