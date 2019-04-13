@@ -23,6 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 			.antMatchers("/actuator**").hasAuthority("SUPER_ADMIN")
 			.antMatchers("/login").permitAll()
+			.antMatchers("/ladder/**").permitAll()
 			.anyRequest().authenticated()
 			.and()
 			.formLogin()
