@@ -3,27 +3,31 @@ package com.dgy.homework;
 import java.util.*;
 import java.io.*;
 import org.springframework.stereotype.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Component
 public class Ladder{
+    private static Logger logger = LoggerFactory.getLogger(Ladder.class);
+
 	private Ladder(){}
 
 	public static ArrayList<String> run(String s1,String s2){
 		if(s1.equals("") || s2.equals("")){
-			System.out.println("args must be non-empty.");
+			logger.info("args must be non-empty.");
 			return null;
 		}
 		if(s1.length() != s2.length()){
-			System.out.println("args must be in same length");
+			logger.info("args must be in same length");
 			return null;
 		}
 		if(s1.equals(s2)){
-			System.out.println("args must be different");
+			logger.info("args must be different");
 			return null;
 		}
 
 		ArrayList<String> res = null;
-		System.out.println("Generating ladder..");
+		logger.info("Generating ladder..");
 		res = generateLadder(s1,s2);
 		System.out.println(res);
 		return res;
