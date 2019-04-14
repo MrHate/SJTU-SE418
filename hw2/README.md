@@ -1,4 +1,4 @@
---- Java Wordladder
+# Java Wordladder
 
 1. mvn clean package
 	Generate jar.
