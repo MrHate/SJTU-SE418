@@ -76,7 +76,7 @@ public class HomeworkApplicationTests {
 
 		req = MockMvcRequestBuilders.get("/actuator");
 		mvc.perform(req)
-				.andExpect(MockMvcResultMatchers.status().isFound());
+				.andExpect(MockMvcResultMatchers.status().is3xxRedirection());
 	}
 
 	@Test
