@@ -15,3 +15,6 @@
 - PullRequest for branch 'dev'.
 - Rest api adopted.
 - Test for Rest api and original interface.
+- Include Spring Security and Actuator.
+- Spring Security to protect Spring Actuator.
+- Tests for Spring Security and Actuator.

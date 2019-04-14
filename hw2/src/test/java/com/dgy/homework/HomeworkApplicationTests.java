@@ -35,39 +35,39 @@ public class HomeworkApplicationTests {
 	public void contextLoads() {
 	}
 
-	//@Test
-	//public void ladderFromDogToCat() {
-	//    //[cat, cag, cog, dog];
-	//    ArrayList<String> answer = new ArrayList(); 
-	//    answer.add("cat");
-	//    answer.add("cag");
-	//    answer.add("cog");
-	//    answer.add("dog");
-	//    ArrayList<String> result = Ladder.run("dog","cat");
-	//    Assert.assertEquals(answer,result);
-	//}
+	@Test
+	public void ladderFromDogToCat() {
+		//[cat, cag, cog, dog];
+		ArrayList<String> answer = new ArrayList(); 
+		answer.add("cat");
+		answer.add("cag");
+		answer.add("cog");
+		answer.add("dog");
+		ArrayList<String> result = Ladder.run("dog","cat");
+		Assert.assertEquals(answer,result);
+	}
 
-	//@Test
-	//public void ladderFromBallToHack(){
-	//    //[hack, back, balk, ball]
-	//    ArrayList<String> answer = new ArrayList(); 
-	//    answer.add("hack");
-	//    answer.add("back");
-	//    answer.add("balk");
-	//    answer.add("ball");
-	//    ArrayList<String> result = Ladder.run("ball","hack");
-	//    assertEquals(answer,result);
-	//}
+	@Test
+	public void ladderFromBallToHack(){
+		//[hack, back, balk, ball]
+		ArrayList<String> answer = new ArrayList(); 
+		answer.add("hack");
+		answer.add("back");
+		answer.add("balk");
+		answer.add("ball");
+		ArrayList<String> result = Ladder.run("ball","hack");
+		Assert.assertEquals(answer,result);
+	}
 
-	//@Test
-	//public void restLadderFromDogToCat() throws Exception{
-	//    RequestBuilder req = null;
+	@Test
+	public void restLadderFromDogToCat() throws Exception{
+		RequestBuilder req = null;
 
-	//    req = MockMvcRequestBuilders.get("/ladder/dog&cat");
-	//    mvc.perform(req)
-	//            .andExpect(status().isOk())
-	//            .andExpect(content().string("[\"cat\",\"cag\",\"cog\",\"dog\"]"));
-	//}
+		req = MockMvcRequestBuilders.get("/ladder/dog&cat");
+		mvc.perform(req)
+				.andExpect(MockMvcResultMatchers.status().isOk())
+				.andExpect(MockMvcResultMatchers.content().string("[\"cat\",\"cag\",\"cog\",\"dog\"]"));
+	}
 
 	@Test
 	@WithAnonymousUser
