@@ -107,7 +107,7 @@ public class HomeworkApplicationTests {
 
 		req = MockMvcRequestBuilders.get("/actuator/health");
 		res = mvc.perform(req).andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
-        Assert.assertEquals("Status: UP", res.getResponse().getContentAsString(), "{\"status\":\"UP\"}");
+		Assert.assertEquals("Status: UP", res.getResponse().getContentAsString(), "{\"status\":\"UP\"}");
 	}
 
 	@Test
@@ -118,7 +118,7 @@ public class HomeworkApplicationTests {
 
 		req = MockMvcRequestBuilders.get("/actuator/info");
 		res = mvc.perform(req).andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
-        Assert.assertEquals("Status: UP", res.getResponse().getContentAsString(), "{\"app\":{\"name\":\"wordLadder_java\",\"version\":\"1.0.0\"}}");
+		Assert.assertEquals("Status: UP", res.getResponse().getContentAsString(), "{\"app\":{\"name\":\"wordLadder_java\",\"version\":\"1.0.0\"}}");
 	}
 
 
