@@ -18,3 +18,6 @@
 - Include Spring Security and Actuator.
 - Spring Security to protect Spring Actuator.
 - Tests for Spring Security and Actuator.
+
+**Task 2**
+- Find the resource consumption of my REST service.
