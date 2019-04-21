@@ -11,12 +11,12 @@ Memory 16GB 1600 MHz DDR3
 
 GPU Intel Iris Pro 1536MB
 
-
+下面是是第一次进行GET请求时Prometheus捕捉到的信息
 
 ![CPU Consumption](./images/cpu1.png)
 ![Memory Consumption](./images/mem1.png)
 
-在向服务器发出get请求后，与内存消耗相比，CPU消耗更为明显。
+在向服务器发出GET请求后，与内存消耗相比，CPU消耗更为明显。
 
 抛开REST请求的封装带来的资源消耗来直接观察WordLadder的实现（REST的封装带来的额外性能消耗远低于Ladder的生成过程）
 
