@@ -1,16 +1,10 @@
 # Task 2
 ## The report for the resource consumption of my REST service
 
-![CPU Consumption when idling](./cpu1.png)
-![CPU Consumption when generating ladder](./cpu2.png)
-![Memory Consumption when idling](./mem1.png)
-![Memory Consumption when generating ladder](./mem2.png)
+![CPU Consumption](./images/cpu1.png)
+![Memory Consumption](./images/mem1.png)
 
-与内存消耗相比，CPU消耗更为明显。
-
-在向后台发送了get请求后，cpu的用户占用率从5.24%增加到了17.20%。（请求方式为http://localhost:8080/ladder/cat&dog）
-
-----
+在向服务器发出get请求后，与内存消耗相比，CPU消耗更为明显。
 
 抛开REST请求的封装带来的资源消耗来直接观察WordLadder的实现（REST的封装带来的额外性能消耗远低于Ladder的生成过程）
 
@@ -106,19 +100,27 @@ public class Ladder{
 ```
 
 内存资源的占用主要来自于两个方面，一个是对字典内容的储存，另一个是bfs的中间过程记录。
+该Ladder类采用BFS算法来根据缓存到内存中的字典来生成结果。
+BFS过程中采用了6个辅助容器来记录中间过程。
 分析算法后可知生成过程中的中间过程记录所占内存远低于字典内容的储存，而字典的大小为2.2MB。
+而BFS过程在进行不断尝试的过程中则会消耗被允许的最大限度的CPU资源。
 
-![Dictory Info](./dic.png)
+![Dictory Info](./images/dic.png)
 
 通过之前的内存消耗截图比较甚至可发现与其余应用消耗来看几乎微乎其微。
 
-----
+由于尚未使用Jmeter等压力测试工具，所以此处暂用同时手动进行多次Get请求发送来进行测试
 
-在同时进行两个ladder生成请求时，可观察到内存依旧并无太多占用，而CPU占用再次显著的上升到28.41%
+![terminal](./images/term1.png)
+![CPU Consumption](./images/cpu2.png)
+![Memory Consumption](./images/mem2.png)
 
-![CPU Consumption](./cpu3.png)
-![Memory Consumption](./mem3.png)
-![terminal](./term.png)
+
+![terminal](./images/term2.png)
+![CPU Consumption](./images/cpu3.png)
+![Memory Consumption](./images/mem3.png)
+
+对比得知前后对于CPU的消耗相较于内存更明显
 
 ## 结论
 对于该算法而言CPU的占用率显著高于内存占用率（相比于其他应用）
