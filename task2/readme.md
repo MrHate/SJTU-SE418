@@ -2,9 +2,13 @@
 ## The report for the resource consumption of my REST service
 
 系统配置：
+
 MacBook Pro
+
 CPU 2.5GHz Intel Core i7
+
 Memory 16GB 1600 MHz DDR3
+
 GPU Intel Iris Pro 1536MB
 
 
