@@ -1,6 +1,14 @@
 # Task 2
 ## The report for the resource consumption of my REST service
 
+系统配置：
+MacBook Pro
+CPU 2.5GHz Intel Core i7
+Memory 16GB 1600 MHz DDR3
+GPU Intel Iris Pro 1536MB
+
+
+
 ![CPU Consumption](./images/cpu1.png)
 ![Memory Consumption](./images/mem1.png)
 
@@ -100,9 +108,13 @@ public class Ladder{
 ```
 
 内存资源的占用主要来自于两个方面，一个是对字典内容的储存，另一个是bfs的中间过程记录。
+
 该Ladder类采用BFS算法来根据缓存到内存中的字典来生成结果。
+
 BFS过程中采用了6个辅助容器来记录中间过程。
+
 分析算法后可知生成过程中的中间过程记录所占内存远低于字典内容的储存，而字典的大小为2.2MB。
+
 而BFS过程在进行不断尝试的过程中则会消耗被允许的最大限度的CPU资源。
 
 ![Dictory Info](./images/dic.png)
