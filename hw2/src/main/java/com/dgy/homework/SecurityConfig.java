@@ -24,6 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/actuator").hasAuthority("SUPER_ADMIN")
 			.antMatchers("/actuator/**").hasAuthority("SUPER_ADMIN")
 			.antMatchers("/login").permitAll()
+			.antMatchers("/actuator/prometheus").permitAll()
 			.antMatchers("/ladder/**").permitAll()
 			.anyRequest().authenticated()
 			.and()
