@@ -21,3 +21,7 @@
 
 **Task 2**
 - Find the resource consumption of my REST service.
+
+**Task 3**
+- docker, dockerfile, dockerhub.
+- build, run, exec, pull, push.
