@@ -19,4 +19,4 @@
 7. docker push <name:tag> 向dockerhub上push本地镜像
 
 ## dockerhub
-8. https://cloud.docker.com/repository/docker/hate/se418
+8. https://hub.docker.com/r/hate/se418
