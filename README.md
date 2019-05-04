@@ -25,3 +25,7 @@
 **Task 3**
 - docker, dockerfile, dockerhub.
 - build, run, exec, pull, push.
+
+**Homework 3**
+- https://hub.docker.com/r/hate/auth
+- https://hub.docker.com/r/hate/ladder
