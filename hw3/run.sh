@@ -8,5 +8,5 @@ mvn clean package;
 docker build -t ladder:v1 .;
 
 cd ..;
-docker run --name=auth -d -p 8080:8080 auth:v1;
-docker run --name=ladder --link=auth -d -P ladder:v1;
+docker run --name=ladder -d -P ladder:v1;
+docker run --name=auth --link=ladder -d -p 8080:8080 auth:v1;
