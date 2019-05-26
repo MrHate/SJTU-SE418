@@ -54,6 +54,14 @@ public class ContainerApplicationTests {
 		container.clear();
 		Assert.assertTrue(container.isEmpty());
 		
+		container.push(Integer.valueOf(1));
+		Assert.assertFalse(container.isEmpty());
+		try{
+			Thread.sleep(2010);
+		}catch(Exception e){
+
+		}
+		Assert.assertTrue(container.isEmpty());
 	}
 
 }
