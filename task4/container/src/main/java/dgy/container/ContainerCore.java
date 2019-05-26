@@ -34,6 +34,7 @@ public class ContainerCore {
 
 	public void push(Object o){
 		mem.add(head++,o);
+		System.out.println(mem);
 	}
 
 	public boolean isEmpty(){
