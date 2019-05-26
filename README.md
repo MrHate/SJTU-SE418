@@ -29,3 +29,8 @@
 **Homework 3**
 - https://hub.docker.com/r/hate/auth
 - https://hub.docker.com/r/hate/ladder
+
+**Task 4**
+- container, provider, consumer
+- queue, stack, timeout
+- single, mutliple
